@@ -1,0 +1,11 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;  
+  background-color:rgb(28,152,247);
+  background-image: -moz-linear-gradient( -15deg, rgb(110,188,243) 0%, rgb(205, 209, 141) 100%);
+  background-image: -webkit-linear-gradient( -15deg, rgb(110,188,243) 0%, rgb(176, 177, 119) 100%);
+  background-image: -ms-linear-gradient( -15deg, rgb(110,188,243) 0%, rgb(236, 222, 90) 100%);
+}

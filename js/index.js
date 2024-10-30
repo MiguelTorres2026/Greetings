@@ -2,26 +2,29 @@
 const d = new Date();
 // Store the value of getHours in variable
 let hour = d.getHours();
+// hour = 15;
+// hour = 20;
+// hour = 2;
+// console.log(hour);
+// Create greeting variable
+let greetingText = document.getElementById("greeting-text");
 
-console.log(hour);
-//hour=20;
-if (hour<12) {
-    console.log("Good Morning");
-// Morning
-document.getElementById("Greeting").innerText="Good Morning";
-document.getElementById("image").src="";
-
-
-}
- else if (hour<17) {
-    console.log("Good Afternoon");
-    document.getElementById("Greeting").innerText="Good Afternoon";
-    document.getElementById("image").src=""
-// Afternoon
-}
+if (hour < 12) {
+  // if hour is less than 12pm
+  greetingText.textContent = "Good Morning!";
+  document.querySelector(".night").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
+} else if (hour < 17) {
+  // if hour is less than 17:00 (but greater than 12pm)
+  greetingText.textContent = "Good Afternoon!";
+  document.getElementsByTagName("body")[0].classList.add("noon-bg");
+  greetingText.parentElement.classList.add("noon-gradient");
+  document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".night").classList.add("d-none");
+} // hour is greater than 17:00
 else {
-    console.log("GoodNight");
-    document.getElementById("Greeting").innerText="Good Night";
-    document.getElementById("image").src=""
-// Night
+  greetingText.textContent = "Good Night!";
+  greetingText.parentElement.classList.add("night-gradient");
+  document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
 }
